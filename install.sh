@@ -17,6 +17,8 @@ if [ "$1" = "install" ];then # install it
   cp get-weather.sh $INSTPATH
   cp weather-config.sh $INSTPATH
   cp wt7-weatherd $INSTPATH
+  mkdir -p /usr/share/wt7/wt7-weather/icons
+  cp -Rvvv icons/* /usr/share/wt7/wt7-weather/icons
   # clobber file:
   cat > $(awk -F: "/$(whoami)/ {print \$6}" /etc/passwd)"/.wt7-weather.config" << EOL
 #!/bin/bash
@@ -35,6 +37,7 @@ elif [ "$1" = "uninstall" ];then # uninstall it
  rm -rf $INSTPATH/wt7-weatherd
  # destroy cruft:
  rm -rf $(awk -F: "/$(whoami)/ {print \$6}" /etc/passwd)"/.wt7-weather.config"
+ rm -rf /usr/share/wt7/wt7-weather/icons
 else
  usage; # what did they give me?
 fi
