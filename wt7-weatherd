@@ -4,5 +4,7 @@
 #  Douglas Berdeaux
 #
 #sleep 1800 # 1800 seconds in 30 mins
-sleep 120
-get-weather.sh
+while [ 1 ];do
+ get-weather.sh
+ sleep 120
+done;
