@@ -3,8 +3,8 @@
 # 2016 WeakNet Labs, weaknetlabs@gmail.com
 #  Douglas Berdeaux
 #
-#sleep 1800 # 1800 seconds in 30 mins
+killall wt7-weatherd
 while [ 1 ];do
  get-weather.sh
- sleep 120
+ sleep 1800
 done;
