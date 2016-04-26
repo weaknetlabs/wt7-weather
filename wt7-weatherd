@@ -1,0 +1,8 @@
+#!/bin/bash
+#
+# 2016 WeakNet Labs, weaknetlabs@gmail.com
+#  Douglas Berdeaux
+#
+#sleep 1800 # 1800 seconds in 30 mins
+sleep 120
+get-weather.sh
