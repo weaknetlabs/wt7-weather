@@ -18,4 +18,4 @@ EOL
 fi
 sed -ire "5s/.*/$INPUT/g" $FILE # update the config file.
 # run the get-weather.sh code:
-./get-weather.sh
+get-weather.sh
