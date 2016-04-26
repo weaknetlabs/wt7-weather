@@ -17,6 +17,14 @@ if [ "$1" = "install" ];then # install it
   cp get-weather.sh $INSTPATH
   cp weather-config.sh $INSTPATH
   cp wt7-weatherd $INSTPATH
+  # clobber file:
+  cat > $(awk -F: "/$(whoami)/ {print \$6}" /etc/passwd)"/.wt7-weather.config" << EOL
+#!/bin/bash
+#
+#
+#
+#
+EOL
  else
   echo "Please run the installer as root, or with sudo."
   exit 1; # failed
@@ -25,6 +33,8 @@ elif [ "$1" = "uninstall" ];then # uninstall it
  rm -rf $INSTPATH/get-weather.sh
  rm -rf $INSTPATH/weather-config.sh
  rm -rf $INSTPATH/wt7-weatherd
+ # destroy cruft:
+ rm -rf $(awk -F: "/$(whoami)/ {print \$6}" /etc/passwd)"/.wt7-weather.config"
 else
  usage; # what did they give me?
 fi
