@@ -3,7 +3,9 @@
 # 2016 WeakNet Labs, weaknetlabs@gmail.com
 #  Douglas Berdeaux
 #
-killall wt7-weatherd
+if [ $(ps aux | grep -iE [w]eather|wc -l) -gt 1 ]; then
+ killall wt7-weatherd # kill itself
+fi
 while [ 1 ];do
  get-weather.sh
  sleep 1800
