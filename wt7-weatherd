@@ -3,7 +3,8 @@
 # 2016 WeakNet Labs, weaknetlabs@gmail.com
 #  Douglas Berdeaux
 #
-if [ $(ps aux | grep -iE [w]eather|wc -l) -gt 1 ]; then
+# Ihave no idea why this needs to be a "2" since I used a regexp
+if [ $(ps aux | grep -iE '[w]t7'|wc -l) -gt 2 ]; then
  killall wt7-weatherd # kill itself
 fi
 while [ 1 ];do
