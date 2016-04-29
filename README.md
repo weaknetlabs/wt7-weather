@@ -1,5 +1,5 @@
 # Weakerthan 7 Weather App
-<img border="0" src="https://2.bp.blogspot.com/-wQM91nEHLEw/Vx9h9NMprhI/AAAAAAAAGF8/D7UXHhJF6NIoVUn9M1yj5mhFkdsgc49gQCLcB/s640/new-run.png"><br />
+<img border="0" src="https://weaknetlabs.com/images/wt7-beta-weather-screenshot.PNG"><br />
 Conky display for weather that gets updates from www.wunderground.com
 ## Install
 Run the installer:<br />
