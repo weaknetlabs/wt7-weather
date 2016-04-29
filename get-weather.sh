@@ -39,6 +39,6 @@ echo "Weather will be displayed as: \${$WEATHER}\${$ICON}"
 
 # This will replace entire line:
 LINE="\${image \/usr\/share\/wt7\/wt7-weather\/icons\/$ICON -n -p 0,65 -s 32x32}\${font Prime:size=14}      $WEATHER"
-sed -i.conf "35s/.*/$LINE/" $CONKYCONF
+sed -i.conf "33s/.*/$LINE/" $CONKYCONF
 killall conky
 conky & # fork
