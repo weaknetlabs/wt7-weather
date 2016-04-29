@@ -41,4 +41,4 @@ echo "Weather will be displayed as: \${$WEATHER}\${$ICON}"
 LINE="\${image \/usr\/share\/wt7\/wt7-weather\/icons\/$ICON -n -p 0,65 -s 32x32}\${font Prime:size=14}      $WEATHER"
 sed -i.conf "35s/.*/$LINE/" $CONKYCONF
 killall conky
-conky
+conky & # fork
